@@ -31,12 +31,9 @@ const router = express.Router();
 
 
 try {
-
-
     const dbURL = mongoose.connect(process.env.DB_URL, {
         useNewUrlParser: true,
-        useUnifiedTopology: true,
-        useFindAndModify: true
+        useUnifiedTopology: true
 
     }).then((response) =>{
         fs.appendFile('otp-request.log', `Connection Successful\n${response}\n`, (err) =>{
