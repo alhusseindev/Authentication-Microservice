@@ -10,9 +10,4 @@ phases:
       - yarn install
 artifacts:
   files:
-    - server.js
-    - ProtectedRoute.js
-    - authentication.js
-    - Model/*
-    - package.json
-    - node_modules/*
+    - imagedefinitions.json
