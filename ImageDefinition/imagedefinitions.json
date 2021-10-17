@@ -1,0 +1,6 @@
+[
+  {
+    "name": "sample-app",
+    "imageUri": "932854567301.dkr.ecr.us-east-2.amazonaws.com/auth-api-repo:latest"
+  }
+]

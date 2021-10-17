@@ -16,4 +16,4 @@ artifacts:
     - Model/*
     - package.json
     - node_modules/*
-    - imagedefinitions.json
+    - ImageDefinition/imagedefinitions.json
