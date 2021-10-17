@@ -1,0 +1,7 @@
+FROM node
+EXPOSE 5000
+WORKDIR ./Authentication Microservice
+COPY ["package.json", "yarn.lock*", "./"]
+COPY . .
+RUN yarn install --production
+CMD ["node", "server.js"]

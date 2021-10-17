@@ -11,7 +11,7 @@ const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv').config({path: require('find-config')('.env')});
 const path = require('path');
 const cors = require('cors');
-const protectedRoute = require('./protectedRoute');
+const protectedRoute = require('./ProtectedRoute');
 //const redis = require('redis');
 
 
