@@ -4,7 +4,7 @@ phases:
     runtime-versions:
       docker: 20
       nodejs: 16
-  prebuild:
+  pre_build:
     commands:
       - echo installing dependencies
       - yarn install
@@ -16,7 +16,7 @@ phases:
       - aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 932854567301.dkr.ecr.us-east-2.amazonaws.com
       - docker build -f DockerFile.txt -t auth-api-repo .
       - docker tag auth-api-repo:latest 932854567301.dkr.ecr.us-east-2.amazonaws.com/auth-api-repo:latest
-  postbuild:
+  post_build:
     commands:
       - echo Pushing the Docker Image
       - docker push 932854567301.dkr.ecr.us-east-2.amazonaws.com/auth-api-repo:latest
