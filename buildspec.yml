@@ -11,8 +11,9 @@ phases:
   build:
     commands:
       - echo Building app
-      - yarn run build
+      - yarn run
       - echo containerizing application
+      - systemctl start docker
       - aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 932854567301.dkr.ecr.us-east-2.amazonaws.com
       - docker build -f DockerFile.txt -t auth-api-repo .
       - docker tag auth-api-repo:latest 932854567301.dkr.ecr.us-east-2.amazonaws.com/auth-api-repo:latest
