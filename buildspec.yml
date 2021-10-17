@@ -8,10 +8,6 @@ phases:
     commands:
       - echo installing dependencies
       - yarn install
-  build:
-    commands:
-      - echo Building app
-      - node server.js
 artifacts:
   files:
     - server.js
