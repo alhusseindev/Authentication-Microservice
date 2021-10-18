@@ -9,10 +9,15 @@ app.use("/auth", authServer);
 
 
 app.use(cors({
-   origin: ["http://localhost:3000", "http://127.0.0.1:3000"],  //my frontend's url
+   origin: ["http://localhost:3000", "http://127.0.0.1:3000", "http://localhost:3000/", "*"],  //my frontend's url
    exposedHeaders: ['accessToken', 'accesstoken', 'AccessToken', "email", "otpcode"],
    credentials: true
 }));
+
+app.use(function(request, response, next){
+   response.set("Access-Control-Allow-Origin", "http://localhost:3000");
+   next();
+});
 
 
 
